@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('1st job') {
+            steps {
+                build quietPeriod: 3, job: '1st job'
+            }
+        }
+        stage('2nd job') {
+            steps {
+                build quietPeriod: 3, job: '2nd job'
+            }
+        }
+        stage('3rd job') {
+            steps {
+                build quietPeriod: 3, job: '3rd job'
+            }
+        }
+    }
+}
